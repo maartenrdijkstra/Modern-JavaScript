@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="message">Select either heads or tails</div>
+    <button type="button">Heads</button>
+    <button type="button">Tails</button>
+
+    <script>
+        const coinArray = ["Heads", "Tails"];
+        let score = [0,0]
+        const message = document.querySelector(".message");
+        const buttons = document.querySelectorAll("button");
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click",tossCoin)
+        }
+
+        function tossCoin(e) {
+            let computerToss = Math.floor(Math.random() * coinArray.length);
+            let playerGuess = e.target.innerText;
+            let computerGuess = coinArray[computerToss]
+            let output;
+            message.innerHTML = "Computer Selected " + computerGuess + "<br>";
+            if(playerGuess === computerGuess) {
+                output = "Player wins";
+                score[0]++;
+            } else {
+                score[1]++;
+                output = "Computer wins";
+            }
+
+            message.innerHTML += output + "<br>Player " + score[0] + " Computer " + score[1];
+        }
+
+    </script>
+</body>
+</html>

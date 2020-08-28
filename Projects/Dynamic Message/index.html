@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <style>
+        /*.output {*/
+        /*    width: 200px;*/
+        /*    height: 100px;*/
+        /*    color: white;*/
+        /*    text-align: center;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="output"></div>
+<button type="button">Message</button>
+<script>
+    const button = document.querySelector("button");
+    const output = document.querySelector(".output");
+    // output.setAttribute("style", "color:white; width:200px; height:100px; text-align: center");
+    button.addEventListener("click", showOutput);
+    output.style.cssText = ("color:white; width:200px; height:100px; text-align: center");
+
+    function showOutput() {
+        const date = new Date();
+        let cur = date.getHours();
+        let message;
+
+        if (cur > 17) {
+            message = "It's evening";
+            output.style.backgroundColor = "black";
+        } else if (cur > 12) {
+            message = "It's afternoon";
+            output.style.backgroundColor = "blue"
+        } else if (cur > 0) {
+            message = "It's morning";
+            output.style.backgroundColor = "orange"
+        } else {
+            message = "Something is wrong";
+            output.style.backgroundColor = "red";
+        }
+
+        output.innerHTML = "<h1>" + message + "</h1>"
+    }
+</script>
+</body>
+</html>

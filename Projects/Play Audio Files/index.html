@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <style>
+        .animal {
+            width: 100px;
+            height: 50px;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 15px;
+        }
+
+        .active {
+            border: 1px solid red;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const myArray = ["lion", "elephant", "dog"];
+    document.addEventListener("DOMContentLoaded", init);
+
+    function init() {
+        console.log("page ready");
+        myArray.forEach(function (item) {
+            console.log(item);
+            let div = document.createElement("div");
+            div.setAttribute("class", "animal " + item);
+            div.innerText = item.toUpperCase();
+            div.addEventListener("click", function () {
+                playIt(item);
+            })
+            document.body.appendChild(div);
+        })
+    }
+
+    function playIt(name) {
+        let activeEle = document.querySelector("." + name);
+        let sound = new Audio("sound/" + name + ".wav");
+        sound.play();
+        console.log(activeEle);
+        activeEle.classList.add("active");
+        setTimeout(function () {
+            activeEle.classList.remove("active");
+        }, 200);
+    }
+</script>
+</body>
+</html>
