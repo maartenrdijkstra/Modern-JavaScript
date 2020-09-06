@@ -1,4 +1,4 @@
-const api = "AIzaSyCsx1nZw_GqBatpkMfIlKn4JquVr7lCK2g";
+const api = "";
 const output = document.querySelector('.output');
 const searchTerm = document.querySelector('input');
 
