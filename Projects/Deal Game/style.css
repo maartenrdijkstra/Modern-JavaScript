@@ -1,0 +1,145 @@
+.btn {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 3px 3px black;
+}
+
+.start {
+    position: absolute;
+    width: 30%;
+    top: 20px;
+    left: 35%;
+    z-index: 1;
+}
+
+.gameArea {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #eee;
+}
+
+.cell {
+    float: left;
+}
+
+.col {
+    margin-top: 20px;
+    min-width: 100px;
+    width: 19%;
+    border: 1px solid #eee;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    min-width: 800px;
+}
+
+.case {
+    position: absolute;
+    min-width: 100px;
+    width: 10%;
+    height: 60px;
+    font-family: fantasy;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 40px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.sideVal {
+    margin: auto;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+.muted {
+    color:#eee;
+    border:1px solid #eee;
+}
+
+.reveal{
+    color:red;
+
+}
+.close {
+    color: #333;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal1,
+.modal2 {
+    display: none;
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 120px;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #eee;
+    margin: auto;
+    min-height: 200px;
+    padding: 30px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.modal-body,
+.modal-body2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.deal {
+    background-color: green;
+}
+
+.noDeal {
+    background-color: red;
+}
+
+.offers {
+    width: 40%;
+    height: 50px;
+    font-size: 2em;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    margin: 3%;
+}
+
+.offers:hover {
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
